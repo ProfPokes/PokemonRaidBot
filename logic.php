@@ -4251,6 +4251,12 @@ function show_raid_poll($raid)
         $msg .= CR . getRaidTranslation('no_participants_yet') . CR;
     }
 
+    //Add custom message from the config.   
+    if (defined(MAP_URL) && MAP_URL != '') {
+
+        $msg .= CR . MAP_URL ;
+    }	
+	
     // Display creator.
     $msg .= ($raid['user_id'] && $raid['name']) ? (CR . getRaidTranslation('created_by') . ': <a href="tg://user?id=' . $raid['user_id'] . '">' . htmlspecialchars($raid['name']) . '</a>') : '';
 
