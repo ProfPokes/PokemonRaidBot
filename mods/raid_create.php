@@ -69,21 +69,23 @@ if($gym_id > 0) {
     $lat = $gym['lat'];
     $lon = $gym['lon'];
 
-    // Get the address.
-    $addr = get_address($lat, $lon);
+    // Get the address from the DB
+    $addr = $gym['address'];
+	//$addr = get_address($lat, $lon);
 
-    // Get full address - Street #, ZIP District
-    $fullAddress = "";
-    $fullAddress .= (!empty($addr['street']) ? $addr['street'] : "");
-    $fullAddress .= (!empty($addr['street_number']) ? " " . $addr['street_number'] : "");
-    $fullAddress .= (!empty($fullAddress) ? ", " : "");
-    $fullAddress .= (!empty($addr['postal_code']) ? $addr['postal_code'] . " " : "");
-    $fullAddress .= (!empty($addr['district']) ? $addr['district'] : "");
-
-    // Fallback: Get address from database
-    if(empty($fullAddress)) {
-	$fullAddress = $gym['address'];
-    }
+	if (!empty($addr)) {
+		//Use address from DB as default
+		$fullAddress = $gym['address'];
+		
+	} else {
+		// Get full address - Street #, ZIP District
+		$fullAddress = "";
+		$fullAddress .= (!empty($addr['street_number']) ? $addr['street_number'] . " " : "");
+		$fullAddress .= (!empty($addr['street']) ? $addr['street'] : "");
+		$fullAddress .= (!empty($fullAddress) ? ", " : "");
+		$fullAddress .= (!empty($addr['postal_code']) ? $addr['postal_code'] . " " : "");
+		//$fullAddress .= (!empty($addr['district']) ? $addr['district'] : "");
+	}
     debug_log('Gym ID: ' . $gym_id);
     debug_log('Gym Name: ' . $gym_name);
     debug_log('Gym Address: ' . $fullAddress);
@@ -94,12 +96,13 @@ if($gym_id > 0) {
     $addr = get_address($lat, $lon);
 
     // Get full address - Street #, ZIP District
-    $fullAddress = "";
-    $fullAddress .= (!empty($addr['street']) ? $addr['street'] : "");
-    $fullAddress .= (!empty($addr['street_number']) ? " " . $addr['street_number'] : "");
-    $fullAddress .= (!empty($fullAddress) ? ", " : "");
-    $fullAddress .= (!empty($addr['postal_code']) ? $addr['postal_code'] . " " : "");
-    $fullAddress .= (!empty($addr['district']) ? $addr['district'] : "");
+	$fullAddress = "";
+	$fullAddress .= (!empty($addr['street_number']) ? $addr['street_number'] . " " : "");
+	$fullAddress .= (!empty($addr['street']) ? $addr['street'] : "");
+	$fullAddress .= (!empty($fullAddress) ? ", " : "");
+	$fullAddress .= (!empty($addr['postal_code']) ? $addr['postal_code'] . " " : "");
+	//$fullAddress .= (!empty($addr['district']) ? $addr['district'] : "");
+
 }
 
 // Insert new raid or warn about existing raid?

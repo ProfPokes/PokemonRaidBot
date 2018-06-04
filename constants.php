@@ -21,8 +21,8 @@ $languages = array(
 define('TEAM_B',        iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F499)));
 define('TEAM_R',        iconv('UCS-4LE', 'UTF-8', pack('V', 0x2764)));
 define('TEAM_Y',        iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F49B)));
-define('TEAM_CANCEL',   iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F494)));
-define('TEAM_DONE',     iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F4AA)));
+define('TEAM_CANCEL',   iconv('UCS-4LE', 'UTF-8', pack('V', 0x274C)));
+define('TEAM_DONE',     iconv('UCS-4LE', 'UTF-8', pack('V', 0x2705)));
 define('TEAM_UNKNOWN',  iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F680)));
 define('EMOJI_REFRESH', iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F504)));
 define('EMOJI_HERE',    iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F4CD)));

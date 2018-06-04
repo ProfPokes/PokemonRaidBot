@@ -97,7 +97,7 @@ if($raid_level == 'X') {
 	$switch_view = "clocktime";
 	$key_count = 5;
 
-        for ($i = 1; $i <= RAID_EGG_DURATION; $i = $i + 1) {
+        for ($i = 1; $i <= RAID_EGG_DURATION; $i = $i + 2) {
             $now_plus_i = $now + $i*60;
             // Create the keys.
             $keys[] = array(
@@ -114,7 +114,7 @@ if($raid_level == 'X') {
 	// Small screen fix
 	$key_count = 4;
 
-        for ($i = 1; $i <= RAID_EGG_DURATION; $i = $i + 1) {
+        for ($i = 1; $i <= RAID_EGG_DURATION; $i = $i + 2) {
 	    $now_plus_i = $now + $i*60;
             // Create the keys.
             $keys[] = array(

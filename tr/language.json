@@ -140,7 +140,7 @@
 	"Xstars" : {
 		"NL": "Ex-Raid",
 		"DE": "Ex-Raid",
-		"EN": "Ex-Raid",
+		"EN": "EX Raid",
 		"PT-BR": "Ex-Raid"
 	},
 	"5stars" : {
@@ -206,7 +206,7 @@
 	"raid_done" : {
 		"NL": "Raid beëindigd",
 		"DE": "Raid beendet.",
-		"EN": "Raid done",
+		"EN": "Raid Ended",
 		"PT-BR": "Raid completa"
 	},
 	"here" : {
@@ -230,7 +230,7 @@
 	"cancellation" : {
 		"NL": "Afwezig",
 		"DE": "Absage",
-		"EN": "Cancellation",
+		"EN": "Cancel",
 		"PT-BR": "Cancelada"
 	},
 	"vote_updated" : {
@@ -242,7 +242,7 @@
 	"vote_time_first" : {
 		"NL": "Kies eerst een tijd!",
 		"DE": "Zuerst für eine Uhrzeit abstimmen!",
-		"EN": "Vote for a time first!",
+		"EN": "Please vote for a time first!",
 		"PT-BR": "TRANSLATE"
 	},
 	"weekday_1" : {
@@ -368,13 +368,13 @@
 	"raid_egg_opens" : {
 		"NL": "Gaat open",
 		"DE": "Öffnet sich um",
-		"EN": "Opens up",
+		"EN": "Hatches at",
 		"PT-BR": "Ovo eclode"
 	},
 	"raid_egg_opens_day" : {
 		"NL": "Gaat open",
 		"DE": "Öffnet sich am",
-		"EN": "Opens on",
+		"EN": "Hatches on",
 		"PT-BR": "Ovo eclode em"
 	},
 	"raid_egg_opens_at" : {
@@ -392,7 +392,7 @@
 	"exraid_pass" : {
 		"NL": "DEELNAME IS ALLEEN MOGELIJK MET EX-RAID PASS",
 		"DE": "TEILNAHME IST NUR MIT EX-RAID-PASS MÖGLICH",
-		"EN": "PARTICIPATION IS POSSIBLE ONLY WITH EX-RAID PASS",
+		"EN": "PARTICIPATION IS ONLY POSSIBLE WITH EX-RAID PASS",
 		"PT-BR": "PARTICIPAÇÃO APENAS COM PASSE EX"
 	},
 	"no_participants_yet" : {
@@ -446,7 +446,7 @@
 	"late_participants" : {
 		"NL": "Let op er zijn spelers later.",
 		"DE": "Einige Teilnehmer verspäten sich.",
-		"EN": "Some participants are late.",
+		"EN": " Some players are running late.",
 		"PT-BR": "TRANSLATE"		
 	},
 	"late_participants_wait" : {
@@ -632,7 +632,7 @@
 	"set_gym_team" : {
 		"NL": "Optioneel - zet Gym en Team",
 		"DE": "Optional - Arena Team setzen",
-		"EN": "Optional - set Gym and Team",
+		"EN": "Optional - set current gym colour",
 		"PT-BR": "Opcional - escolha o gínasio e time"
 	},
 	"set_gym_team_command" : {
@@ -644,7 +644,7 @@
 	"start_date_time" : {
 		"NL": "Starttijd gezet op",
 		"DE": "Startzeit gesetzt auf",
-		"EN": "Starttime set to",
+		"EN": "Start time set to",
 		"PT-BR": "Hora de começar determinada para"
 	},
 	"end_time" : {
@@ -680,7 +680,7 @@
 	"raid_starts_when" : {
 		"NL": "Wanneer gaat het Raid ei <b>open</b>?",
 		"DE": "Wann <b>beginnt</b> der Raid?",
-		"EN": "When will the Raid <b>begin</b>?",
+		"EN": "When does the Raid <b>begin</b>?",
 		"PT-BR": "Quando a raid irá <b>começar</b>?"
 	},
 	"raid_starts_when_minutes" : {
@@ -914,13 +914,13 @@
 	"send_location" : {
  		"NL": "Of stuur me alsjeblieft een locatie.",
     		"DE": "Oder sende mir einen Standort.",
-    		"EN": "Or send me a location.",
+    		"EN": "[If a gym is missing please inform an admin]",
     		"PT-BR": "Por favor, antes me envie a localização."
   	},
   	"raid_by_gym" : {
     		"NL": "Maak een raid door een Gym te selecteren:",
     		"DE": "Lege ein Raid per Arena-Auswahl an:",
-    		"EN": "Make a raid per gym selection:",
+    		"EN": "Please press Create a Raid to begin setting up a raid:",
     		"PT-BR": "Ou escolha uma raid por ginásio:" 
   	},
 	"red" : {
