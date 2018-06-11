@@ -710,7 +710,7 @@
 	"is_raid_active" : {
 		"NL": "Raid is al actief!",
 		"DE": "Raid läuft schon!",
-		"EN": "Raid is already active!",
+		"EN": "Hatched",
 		"PT-BR": "A raid já está ativa!"
 	},
 	"bot_access_denied" : {
