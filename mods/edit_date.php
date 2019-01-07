@@ -7,6 +7,7 @@ debug_log('edit_date()');
 //debug_log($data);
 
 // Check access - user must be admin!
+/*
 $admin_access = bot_access_check($update, BOT_ADMINS, true);
 if (!$admin_access) {
     // Do not edit message, but send access denied back to user and exit then
@@ -14,6 +15,7 @@ if (!$admin_access) {
     sendMessage($update['callback_query']['from']['id'], $response_msg);
     exit;
 }
+*/
 
 // Set the id.
 $id = $data['id'];

@@ -3055,6 +3055,20 @@ function keys_vote($raid)
             );
         }
 
+		//Add hatch option if there's too long until the first slot.
+        if(RAID_HATCH == true) {
+        	$firstOption = ceil($start_time / $timePerSlot) * $timePerSlot;
+        	$timeDiff  = $firstOption - $start_time;
+			$maxWait = 4 * 60; //Anything over 4 mins wil add hatch option
+   
+	    	if($timeDiff > $maxWait && $start_time >= $now) { 
+	        	$keys_time[] = array(
+	                        'text'          => unix2tz($start_time, $raid['timezone']),
+	                        'callback_data' => $raid['id'] . ':vote_time:' . $start_time
+	             );
+			}
+        }
+
         // Old stuff, left for possible future use or in case of bugs:
         //for ($i = ceil($now / $timePerSlot) * $timePerSlot; $i <= ($end_time - $timeBeforeEnd); $i = $i + $timePerSlot) {
         for ($i = ceil($start_time / $timePerSlot) * $timePerSlot; $i <= ($end_time - $timeBeforeEnd); $i = $i + $timePerSlot) {
@@ -3485,8 +3499,8 @@ function get_overview($update, $chats_active, $raids_active, $action = 'refresh'
             $msg .= getTranslation('no_active_raids');
 
             //Add custom message from the config.   
-            if (RAID_PIN_MESSAGE != '') {
-                $msg .= RAID_PIN_MESSAGE . CR;
+            if (defined('RAID_PIN_MESSAGE') && !empty(RAID_PIN_MESSAGE)) {
+                $msg .= CR . EMOJI_MAP . ' '. RAID_PIN_MESSAGE . CR;
             }
 
             // Edit the message, but disable the web preview!
@@ -3532,8 +3546,8 @@ function get_overview($update, $chats_active, $raids_active, $action = 'refresh'
 	    $keys = array();
         
             //Add custom message from the config.	
-            if (RAID_PIN_MESSAGE != '') {
-                $msg .= RAID_PIN_MESSAGE . CR;
+		   if (defined('RAID_PIN_MESSAGE') && !empty(RAID_PIN_MESSAGE)) {
+                $msg .= CR . EMOJI_MAP . ' '. RAID_PIN_MESSAGE . CR;
             }
 
             // Share or refresh?
@@ -3702,7 +3716,7 @@ function get_overview($update, $chats_active, $raids_active, $action = 'refresh'
                 // Output: Raid egg opens up 17:00
                 $msg .= $pokemon . ' — <b>' . getTranslation('raid_egg_opens') . ' ' . unix2tz($start_time, $tz) . '</b>' . CR;
             } else {
-                if($days_to_raid > 7) {
+                if($days_to_raid > 6) {
                     // Output: Raid egg opens on Friday, 13 April (2018)
                     $msg .= $pokemon . ' — <b>' . getTranslation('raid_egg_opens_day') . ' ' .  $raid_day . ', ' . $day_start . ' ' . $raid_month . (($year_start > $year_now) ? $year_start : '');
                 } else {
@@ -3925,7 +3939,7 @@ function show_raid_poll($raid)
             // Output: Raid egg opens up 17:00
             $msg .= '<b>' . getRaidTranslation('raid_egg_opens') . ' ' . unix2tz($raid['ts_start'], $raid['timezone']) . '</b>' . CR;
         } else {
-            if($days_to_raid > 7) {
+            if($days_to_raid > 6) {
                 // Output: Raid egg opens on Friday, 13 April (2018)
                 $msg .= '<b>' . getRaidTranslation('raid_egg_opens_day') . ' ' .  $raid_day . ', ' . $day_start . ' ' . $raid_month . (($year_start > $year_now) ? $year_start : '');
             } else {

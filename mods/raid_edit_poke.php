@@ -7,7 +7,7 @@ debug_log('raid_edit_poke()');
 //debug_log($data);
 
 // Check raid access.
-raid_access_check($update, $data);
+//raid_access_check($update, $data);
 
 // Set the id.
 $raid_id = $data['id'];

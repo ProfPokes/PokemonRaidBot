@@ -43,6 +43,7 @@ $request = my_query(
     FROM      raids
       WHERE   end_time>NOW()
         AND   timezone='{$tz}'
+        AND pokemon !=386
     ORDER BY  end_time ASC LIMIT 20
     "
 );

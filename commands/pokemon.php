@@ -6,8 +6,8 @@ debug_log('POKEMON()');
 //debug_log($update);
 //debug_log($data);
 
-// Check access.
-bot_access_check($update, BOT_ACCESS);
+// Check access. (Disabled to allow all to update raid bosses)
+//bot_access_check($update, BOT_ACCESS);
 
 // Build query.
 $rs = my_query(

@@ -125,7 +125,7 @@ if ($raid_id != 0) {
 
     // Create the keys.
     if ($raid_status == "end") {
-	$msg = getTranslation('raid_already_exists') . CR . show_raid_poll_small($raid);
+	$msg = getTranslation('raid_already_exists') . CR . CR2 . show_raid_poll_small($raid);
         // Init keys.
         $keys = array();
 

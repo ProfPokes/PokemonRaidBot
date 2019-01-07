@@ -30,6 +30,8 @@ define('EMOJI_LATE',    iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F40C)));
 define('EMOJI_GROUP',   iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F465)));
 define('EMOJI_WARN',    iconv('UCS-4LE', 'UTF-8', pack('V', 0x26A0)));
 define('EMOJI_DISK',    iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F4BE)));
+define('EMOJI_MAP',     iconv('UCS-4LE', 'UTF-8', pack('V', 0x1F5FA)));
+define('EMOJI_SHINY',   iconv('UCS-4LE', 'UTF-8', pack('V', 0x2728)));
 
 // Weather Icons.
 define('EMOJI_W_SUNNY',            iconv('UCS-4LE', 'UTF-8', pack('V', 0x2600)));

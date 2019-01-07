@@ -70,8 +70,11 @@ if (true || $arg == "more-options" || $arg == "ex-raid") {
         }
     } else {
         // Use raid pokemon duration short.
+		//$timeText = (RAID_POKEMON_DURATION_SHORT < 60 ? '0:' . RAID_POKEMON_DURATION_SHORT : '1:' . (RAID_POKEMON_DURATION_SHORT - 60));
+		$timeText = floor(RAID_POKEMON_DURATION_SHORT / 60) . ':' . str_pad(RAID_POKEMON_DURATION_SHORT % 60, 2, '0', STR_PAD_LEFT);
+		//'text'          => '0:' . RAID_POKEMON_DURATION_SHORT,
         $keys[] = array(
-            'text'          => '0:' . RAID_POKEMON_DURATION_SHORT,
+            'text'          => $timeText,
             'callback_data' => $id . ':edit_left:' . RAID_POKEMON_DURATION_SHORT
         );
 

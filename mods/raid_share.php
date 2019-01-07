@@ -7,7 +7,7 @@ debug_log('raid_share()');
 //debug_log($data);
 
 // Check raid access.
-raid_access_check($update, $data);
+//raid_access_check($update, $data);
 
 // Get raid id.
 $id = $data['id'];
